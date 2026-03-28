@@ -2,11 +2,12 @@ package asciiart
 
 import (
 	"fmt"
+
 	"os"
 	"strings"
 )
 
-func FileHandler(paras ...string) ([]byte, bool) {
+func FileReader(paras ...string) ([]byte, bool) {
 	var mainStr strings.Builder
 	var fileName strings.Builder
 	var styleName strings.Builder

@@ -1,8 +1,8 @@
-                                       
-  _|_|   _|          _|                
-_|    _|      _|_|_| _|_|_|     _|_|_| 
-_|_|_|_| _| _|_|     _|    _| _|    _| 
-_|    _| _|     _|_| _|    _| _|    _| 
-_|    _| _| _|_|_|   _|    _|   _|_|_| 
-                                       
-                                       
+                                                                                                                                                                                         
+  O         o               o  o                                                            o-O-o       o                                                                              o 
+ / \  o     |               |  |                                                              |         |                                                                              | 
+o---o   o-o O--o  oo        O--O o-o o   o   o        oo  o-o o-o       o  o o-o o  o         |         O--o o-o o-o  o-o       o  o o-o o  o        oo  o-o o-o       o--o o-o o-o  o-O 
+|   | |  \  |  | | |        |  | | |  \ / \ /        | |  |   |-'       |  | | | |  |         |         |  | | | |  | |-'       |  | | | |  |       | |  |   |-'       |  | | | | | |  | 
+o   o | o-o o  o o-o-       o  o o-o   o   o         o-o- o   o-o       o--O o-o o--o       o-O-o       o  o o-o O-o  o-o       o--O o-o o--o       o-o- o   o-o       o--O o-o o-o  o-o 
+                                                                           |                                     |                 |                                      |              
+                                                                        o--o                                     o              o--o                                   o--o              

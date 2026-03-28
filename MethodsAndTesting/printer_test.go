@@ -64,7 +64,7 @@ func TestFormatPrinter(t *testing.T) {
 		},
 	}
 
-	contentRead, readingStatus := FileReader("", "standard")
+	contentRead, readingStatus := FileReader("standard")
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {

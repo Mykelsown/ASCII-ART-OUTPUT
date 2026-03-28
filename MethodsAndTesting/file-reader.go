@@ -2,30 +2,18 @@ package asciiart
 
 import (
 	"fmt"
-
 	"os"
-	"strings"
 )
 
-func FileReader(paras ...string) ([]byte, bool) {
-	var mainStr strings.Builder
-	var fileName strings.Builder
-	var styleName strings.Builder
-	if len(paras) == 2 {
-		fileName.WriteString(paras[0])
-		styleName.WriteString(paras[1])
-	} else if len(paras) == 1 {
-		mainStr.WriteString(paras[0])
+func FileReader(styleName string) ([]byte, bool) {
+	if styleName != "standard" && styleName != "thinkertoy" && styleName != "shadow" {
+		styleName = "standard"
 	}
 
-	if styleName.String() != "standard" && styleName.String() != "thinkertoy" && styleName.String() != "shadow" {
-		styleName.WriteString("standard")
-	}
-	// Read banner file
-	data,readingErr := os.ReadFile("banners/" + styleName.String() + ".txt")
+	data, readingErr := os.ReadFile("banners/" + styleName + ".txt")
 	if readingErr != nil {
 		fmt.Println("Error")
-		return []byte{}, false // returns an empty slice of byte and false if there's is an error
+		return []byte{}, false
 	}
 
 	return data, true

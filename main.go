@@ -5,6 +5,7 @@ import (
 	"flag"
 	"fmt"
 	"os"
+	"strings"
 )
 
 func main() {
@@ -18,15 +19,18 @@ func main() {
 	formatType := arguments[len(arguments)-1]
 
 	// This checks for wrong flag input the user might pass in through the terminal
-	if flagType != "--output="+fileName {
-		fmt.Println(`Usage: go run . [OPTION] [STRING] [BANNER]
-EX: go run . --output=<fileName.txt> something standard`)
+	contentRead, readingStatus := asciiart.FileHandler(fileName, formatType)
+	if flagType == "--output="+fileName && fileName != "white" {
+	for _, str := range arguments[:len(arguments)-1] {
+		fmt.Println(asciiart.FormatPrinter(str, string(contentRead), readingStatus))
+	}
+	} else if strings.HasPrefix(flagType, "-output=") || strings.HasPrefix(flagType, "output=") || strings.HasPrefix(flagType, ".output=") {
+		fmt.Println(`Usage: go run . [OPTION] [STRING]
+EX: go run . --color=<color> <substring to be colored> "something"`)
 		return
+	} else {
+		fmt.Println(asciiart.FormatPrinter(arguments[len(arguments)-1], string(contentRead), readingStatus)) // this allows for validation of the base ascii-art project
 	}
 
-	contentRead, readinStatus := asciiart.FileHandler(fileName, formatType)
-	for _, str := range arguments[:len(arguments)-1] {
-		fmt.Println(asciiart.FormatPrinter(str, string(contentRead), readinStatus))
-	}
 
 }

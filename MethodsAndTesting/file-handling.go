@@ -2,7 +2,6 @@ package asciiart
 
 import (
 	"fmt"
-	"log"
 	"os"
 	"strings"
 )
@@ -27,11 +26,6 @@ func FileHandler(paras ...string) ([]byte, bool) {
 		fmt.Println("Error")
 		return []byte{}, false // returns an empty slice of byte and false if there's is an error
 	}
-
-	writingErr := os.WriteFile(fileName.String(), []byte(FormatPrinter(mainStr.String(), "", true)), 0666)	
-	if writingErr != nil {
-		log.Fatalf("err!: %W", writingErr)
-	}	
 
 	return data, true
 }

@@ -6,8 +6,6 @@ import (
 )
 
 func FormatPrinter(input, contentRead string, readingStatus bool) string {
-	_, _ = FileHandler(input)
-
 	// Error handling for failure to read file. If the file cant be read:
 	// 1. Print out the message
 	// 2. exit the function
